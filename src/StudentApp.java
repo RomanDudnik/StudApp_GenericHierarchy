@@ -1,13 +1,11 @@
-import domain.Student;
-import domain.StudentGroup;
-import domain.StudentSteam;
+import domain.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class StudentApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         // Создание студентов
         Student<String, Integer> student1 = new Student("Ivan", 19);
@@ -128,8 +126,25 @@ public class StudentApp {
         // Сортировка
         Collections.sort(studentGroupsList);
 
-        // Вывод на консоль потока после сортировки
+        // Вывод на консоль потока студентов после сортировки
         System.out.println(studentSteam);
+
+        // Создание учителя
+        Teacher teacher1 = new Teacher("Иванов И.И.", 50, "Доцент");
+        // Создание сотрудника
+        Employee employee1 = new Employee("Петров П.П.", 35, "Дворник");
+
+//        // Создание контроллера
+//        AccountController controller = new AccountController();
+//        // Оплата зарплат
+//        controller.paySalary(teacher1, 50000);
+//        controller.paySalary(employee1, 25000);
+//
+//        // Средний возраст студентов
+//        System.out.println("\n" + "Средний возраст студентов:" + "\n");
+//        System.out.println(controller.averageAge(studentGroup1.getListStudents()));
+//        System.out.println(controller.averageAge(studentGroup2.getListStudents()));
+//        System.out.println(controller.averageAge(studentGroup3.getListStudents()));
     }
 
 }
