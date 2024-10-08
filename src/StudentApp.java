@@ -1,3 +1,4 @@
+import controllers.AccountController;
 import domain.*;
 
 import java.util.ArrayList;
@@ -134,17 +135,17 @@ public class StudentApp {
         // Создание сотрудника
         Employee employee1 = new Employee("Петров П.П.", 35, "Дворник");
 
-//        // Создание контроллера
-//        AccountController controller = new AccountController();
-//        // Оплата зарплат
-//        controller.paySalary(teacher1, 50000);
-//        controller.paySalary(employee1, 25000);
-//
-//        // Средний возраст студентов
-//        System.out.println("\n" + "Средний возраст студентов:" + "\n");
-//        System.out.println(controller.averageAge(studentGroup1.getListStudents()));
-//        System.out.println(controller.averageAge(studentGroup2.getListStudents()));
-//        System.out.println(controller.averageAge(studentGroup3.getListStudents()));
+        // Создание контроллера
+        AccountController controller = new AccountController();
+        // Оплата зарплат
+        controller.paySalary(teacher1, 50000);
+        controller.paySalary(employee1, 25000);
+
+        // Средний возраст студентов
+        System.out.println("\n" + "Средний возраст студентов:" + "\n");
+        System.out.println(controller.averageAge(studentGroup1.getListStudents()));
+        System.out.println(controller.averageAge(studentGroup2.getListStudents()));
+        System.out.println(controller.averageAge(studentGroup3.getListStudents()));
     }
 
 }
